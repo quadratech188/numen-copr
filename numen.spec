@@ -12,6 +12,7 @@ Source0: %{forgesource}
 
 BuildRequires: cmake
 BuildRequires: g++
+BuildRequires: ninja-build
 
 %description
 libnumen is a library to evaluate mathematical expressions, with an emphasis on
@@ -28,7 +29,7 @@ This package provides the development files for numen.
 %forgeautosetup
 
 %conf
-%cmake
+%cmake -G Ninja
 
 %build
 %cmake_build
