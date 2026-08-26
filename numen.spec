@@ -17,6 +17,13 @@ BuildRequires: g++
 libnumen is a library to evaluate mathematical expressions, with an emphasis on
 natural language as well as unit and date-time operations.
 
+%package devel
+Summary: Development files for numen
+Requires: %{name}%{?_isa} = %{version}-%{release}
+
+%description devel
+This package provides the development files for numen.
+
 %prep
 %forgeautosetup
 
@@ -36,10 +43,12 @@ natural language as well as unit and date-time operations.
 %files
 %license LICENSE
 %doc README.md
+%{_libdir}/libnumen.so.*
 
-/usr/include/numen/*
-/usr/lib64/cmake/numen/*
-/usr/lib64/libnumen*
+%files devel
+%{_includedir}/numen/*
+%{_libdir}/cmake/numen/*
+%{_libdir}/libnumen.so
 
 %changelog
 %autochangelog
