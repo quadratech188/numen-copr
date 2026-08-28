@@ -1,7 +1,7 @@
 %global forgeurl https://github.com/vicinaehq/numen
 
 Name: numen
-Version: 0.5.0
+Version: 0.5.1
 Release: %autorelease
 Summary: Zero dependency calculator library with first class support for units and timezone conversions
 
